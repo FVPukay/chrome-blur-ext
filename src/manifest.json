@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Blur Extension",
+  "version": "0.1.0",
+  "description": "The extension will have a popup with a turn-on/off switch and an input field. The extension will blur the page elements containing the text in the input field.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
